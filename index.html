@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="شاركت حلمًا ألهمني لخلق هذا الموقع، اكتشف القصة هنا.">
+  <meta name="description" content="A personal story of a dreamer with a millionaire's mindset, seeking freedom and purpose.">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>الرسالة</title>
+  <title>7 7 7</title>
   <style>
     body {
       background-image: url('image.png');
@@ -16,7 +16,7 @@
       background-color: #121212;
       color: #f5f5f5;
       font-family: 'Amiri', serif;
-      direction: rtl;
+      direction: ltr;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,7 +27,7 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 3.5em;
       margin-bottom: 20px;
       color: #ffd700;
     }
@@ -37,7 +37,7 @@
       max-width: 700px;
       margin-bottom: 40px;
       line-height: 2;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(53, 52, 52, 0.6);
       padding: 20px;
       border-radius: 10px;
     }
@@ -66,27 +66,58 @@
       color: #ffffff;
       font-size: 1.1em;
     }
+
+    /* Animación para que los elementos aparezcan de abajo hacia arriba */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Retrasos para que los elementos aparezcan uno tras otro */
+    h1.fade-in-up {
+      animation-delay: 0s;
+    }
+
+    p.fade-in-up {
+      animation-delay: 0.3s;
+    }
+
+    button.fade-in-up {
+      animation-delay: 0.6s;
+    }
+
+    p.donate.fade-in-up {
+      animation-delay: 0.9s;
+    }
   </style>
 </head>
 <body>
-  <h1>الرسالة</h1>
-  <p>
-    كان لدي حلم غريب.<br><br>
-    في الحلم، التقيت برجل حكيم يرتدي الأبيض وقال لي:<br>
-    <em>"رجل من أرض بعيدة في الشرق الأوسط سيمنحك بركة عظيمة. لا تبحث عنه، فهو سيأتي إليك... سيفعل ذلك لتنقية كارماه."</em><br><br>
-    إذا كنت تقرأ هذا... فربما تكون أنت هذا الشخص.<br><br>
-    أشارككم هذا الحلم كتجربة شخصية ألهمتني، وأترك الأمر للقدر والإيمان.<br><br>
-    من يساعد من قلب نقي، فإن بركته تكون عظيمة، وروحه تُضيء له الطريق.<br><br>
-    ليست لدي أي نية للإساءة أو المزاح. أنا فقط أشارك ما رأيته بصدق.<br><br>
-    قد يبدو غريبًا، بل وحتى مستبعدًا، لكن بالمحاولة لا أخسر شيئًا.<br><br>
-    أنا من الأرجنتين، وسأنتظر بسلام وتواضع.
+  <h1 class="fade-in-up">7 7 7</h1>
+  <p class="fade-in-up">
+    I need someone to help me. I see the world as if from the top of a mountain, detached from the ordinary. 
+    I don’t crave a good job—not because I’m lazy, but because I feel like I’ve stepped out of the matrix. 
+    Working at Google and earning $150,000 a year isn’t enough for me. I see the flaws in others, 
+    and the world feels like a video game filled with characters.<br><br>
+    The only thing that would truly make me happy is to become a millionaire, to travel the world, 
+    and to live a good life. I’m poor—I don’t even have enough money to buy a used car—but I have 
+    the mindset of a millionaire. I’m a millionaire trapped in the body of a poor man.<br><br>
+    If someone in their final days doesn’t know who to leave their money to, I’d be grateful for their help. 
+    Money has no value in the next world—it stays here.
   </p>
 
-  <button onclick="window.location.href='mailto:laotsee777@gmail.com'">راسلني</button>
+  <button class="fade-in-up" onclick="window.location.href='mailto:laotsee777@gmail.com'">Contact Me</button>
 
-  <p class="donate">
-    تبرع بالبيتكوين:<br>
-    <strong>bc1q5ldmd88u9mmm202jy3qdnyenk5t9ad3vkm5l9u</strong>
+  <p class="donate fade-in-up">
+    Donate with Bitcoin:<br>
+    <strong>bc1qls2d3quud83452crcvq7td9xlxsa3557764dnq</strong>
   </p>
 </body>
 </html>
