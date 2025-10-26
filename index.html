@@ -646,14 +646,20 @@
       if (lang === 'ar') {
         document.body.dir = 'rtl';
         document.body.style.textAlign = 'right';
-        document.querySelectorAll('h2, h3, p').forEach(el => {
+        document.querySelectorAll('h2, h3').forEach(el => {
+          el.style.textAlign = 'right';
+        });
+        document.querySelectorAll('#main-para, #vision-para, #call-para, #philosophy-para').forEach(el => {
           el.style.textAlign = 'right';
         });
       } else {
         document.body.dir = 'ltr';
         document.body.style.textAlign = 'center';
-        document.querySelectorAll('h2, h3, p').forEach(el => {
-          el.style.textAlign = el.tagName === 'P' ? 'justify' : 'center';
+        document.querySelectorAll('h2, h3').forEach(el => {
+          el.style.textAlign = 'center';
+        });
+        document.querySelectorAll('#main-para, #vision-para, #call-para, #philosophy-para').forEach(el => {
+          el.style.textAlign = 'justify';
         });
       }
     }
@@ -668,6 +674,7 @@
   </script>
 </body>
 </html>
+
 
 
 
