@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,13 +49,38 @@
       padding: 30px;
     }
 
+    /* Selector de idioma */
+    .lang-selector {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+      background-color: rgba(18, 18, 18, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ffd700;
+    }
+    .lang-selector label {
+      color: #ffd700;
+      font-size: 0.9em;
+      margin-right: 5px;
+    }
+    .lang-selector select {
+      background-color: #ffd700;
+      color: #121212;
+      border: none;
+      padding: 5px;
+      border-radius: 3px;
+      font-family: inherit;
+    }
+
     h1 {
       font-size: 3.5em;
       margin-bottom: 20px;
       color: #ffd700;
     }
 
-    p {
+    #main-para {
       font-size: 1.3em;
       max-width: 700px;
       margin-bottom: 40px;
@@ -65,7 +90,7 @@
       border-radius: 10px;
     }
 
-    button {
+    #contact-btn {
       background-color: #ffd700;
       color: #121212;
       border: none;
@@ -76,7 +101,7 @@
       transition: background-color 0.3s;
     }
 
-    button:hover {
+    #contact-btn:hover {
       background-color: #e6c200;
     }
 
@@ -88,6 +113,10 @@
     .donate strong {
       color: #ffffff;
       font-size: 1.1em;
+    }
+
+    #donate-text {
+      margin-bottom: 5px;
     }
 
     .fade-in-up {
@@ -104,33 +133,106 @@
     }
 
     h1.fade-in-up { animation-delay: 0s; }
-    p.fade-in-up { animation-delay: 0.3s; }
-    button.fade-in-up { animation-delay: 0.6s; }
-    p.donate.fade-in-up { animation-delay: 0.9s; }
+    #main-para.fade-in-up { animation-delay: 0.3s; }
+    #contact-btn.fade-in-up { animation-delay: 0.6s; }
+    .donate.fade-in-up { animation-delay: 0.9s; }
   </style>
 </head>
 
 <body>
+  <!-- Selector de Idioma -->
+  <div class="lang-selector">
+    <label for="lang-select">Idioma:</label>
+    <select id="lang-select">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="ar">العربية</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+    </select>
+  </div>
+
   <h1 class="fade-in-up">7 7 7</h1>
 
-  <p class="fade-in-up">
-    I need someone to help me. I see the world as if from the top of a mountain, detached from the ordinary. 
-    I don’t crave a good job—not because I’m lazy, but because I feel like I’ve stepped out of the matrix. 
-    Having a regular job is boring and not for me. I see the flaws in others, 
-    and the world feels like a video game filled with characters.<br><br>
-    The only thing that would truly make me happy is to become a millionaire, to travel the world, 
-    and to live a good life. I’m poor—I don’t even have enough money to buy a used car—but I have 
-    the mindset of a millionaire. I’m a millionaire trapped in the body of a poor man.<br><br>
-    If someone in their final days doesn’t know who to leave their money to, I’d be grateful for their help. 
-    Money has no value in the next world—it stays here.
+  <p id="main-para" class="fade-in-up">
+    Necesito que alguien me ayude. Veo el mundo como si estuviera desde la cima de una montaña, desconectado de lo ordinario. No anhelo un buen trabajo, no porque sea perezoso, sino porque siento que he salido de la matrix. Tener un trabajo regular es aburrido y no es para mí. Veo los defectos en los demás, y el mundo se siente como un videojuego lleno de personajes.<br><br>Lo único que realmente me haría feliz es convertirme en millonario, viajar por el mundo y vivir una buena vida. Soy pobre, ni siquiera tengo suficiente dinero para comprar un auto usado, pero tengo la mentalidad de un millonario. Soy un millonario atrapado en el cuerpo de un hombre pobre.<br><br>Si alguien en sus últimos días no sabe a quién dejar su dinero, estaría agradecido por su ayuda. El dinero no tiene valor en el próximo mundo, se queda aquí.
   </p>
 
-  <button class="fade-in-up" onclick="window.location.href='mailto:thisgate777@gmail.com'">Contact Me</button>
+  <button id="contact-btn" class="fade-in-up" onclick="window.location.href='mailto:thisgate777@gmail.com'">Contáctame</button>
 
   <p class="donate fade-in-up">
-    Donate with Bitcoin:<br>
+    <span id="donate-text">Donar con Bitcoin:</span><br>
     <strong>bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq</strong>
   </p>
+
+  <script>
+    const translations = {
+      en: {
+        main: `I need someone to help me. I see the world as if from the top of a mountain, detached from the ordinary. I don’t crave a good job—not because I’m lazy, but because I feel like I’ve stepped out of the matrix. Having a regular job is boring and not for me. I see the flaws in others, and the world feels like a video game filled with characters.\\n\\nThe only thing that would truly make me happy is to become a millionaire, to travel the world, and to live a good life. I’m poor—I don’t even have enough money to buy a used car—but I have the mindset of a millionaire. I’m a millionaire trapped in the body of a poor man.\\n\\nIf someone in their final days doesn’t know who to leave their money to, I’d be grateful for their help. Money has no value in the next world—it stays here.`,
+        button: 'Contact Me',
+        donate: 'Donate with Bitcoin:'
+      },
+      es: {
+        main: `Necesito que alguien me ayude. Veo el mundo como si estuviera desde la cima de una montaña, desconectado de lo ordinario. No anhelo un buen trabajo, no porque sea perezoso, sino porque siento que he salido de la matrix. Tener un trabajo regular es aburrido y no es para mí. Veo los defectos en los demás, y el mundo se siente como un videojuego lleno de personajes.\\n\\nLo único que realmente me haría feliz es convertirme en millonario, viajar por el mundo y vivir una buena vida. Soy pobre, ni siquiera tengo suficiente dinero para comprar un auto usado, pero tengo la mentalidad de un millonario. Soy un millonario atrapado en el cuerpo de un hombre pobre.\\n\\nSi alguien en sus últimos días no sabe a quién dejar su dinero, estaría agradecido por su ayuda. El dinero no tiene valor en el próximo mundo, se queda aquí.`,
+        button: 'Contáctame',
+        donate: 'Donar con Bitcoin:'
+      },
+      fr: {
+        main: `J'ai besoin de quelqu'un pour m'aider. Je vois le monde comme si j'étais au sommet d'une montagne, détaché de l'ordinaire. Je ne désire pas un bon emploi — pas parce que je suis paresseux, mais parce que j'ai l'impression d'être sorti de la matrice. Avoir un emploi régulier est ennuyeux et ce n'est pas pour moi. Je vois les défauts chez les autres, et le monde ressemble à un jeu vidéo rempli de personnages.\\n\\nLa seule chose qui me rendrait vraiment heureux serait de devenir millionnaire, de voyager dans le monde et de vivre une bonne vie. Je suis pauvre — je n'ai même pas assez d'argent pour acheter une voiture d'occasion — mais j'ai l'état d'esprit d'un millionnaire. Je suis un millionnaire piégé dans le corps d'un pauvre.\\n\\nSi quelqu'un dans ses derniers jours ne sait pas à qui laisser son argent, je lui serais reconnaissant pour son aide. L'argent n'a pas de valeur dans l'autre monde — il reste ici.`,
+        button: 'Contactez-moi',
+        donate: 'Faites un don avec Bitcoin :'
+      },
+      de: {
+        main: `Ich brauche jemanden, der mir hilft. Ich sehe die Welt, als würde ich vom Gipfel eines Berges aus darauf blicken, losgelöst vom Alltäglichen. Ich sehne mich nicht nach einem guten Job – nicht, weil ich faul bin, sondern weil ich das Gefühl habe, aus der Matrix ausgestiegen zu sein. Ein normaler Job ist langweilig und nichts für mich. Ich sehe die Fehler bei anderen, und die Welt fühlt sich wie ein Videospiel an, das voller Charaktere ist.\\n\\nDas Einzige, was mich wirklich glücklich machen würde, wäre, Millionär zu werden, die Welt zu bereisen und ein gutes Leben zu führen. Ich bin arm – ich habe nicht einmal genug Geld, um ein gebrauchtes Auto zu kaufen –, aber ich habe die Denkweise eines Millionärs. Ich bin ein Millionär, der im Körper eines armen Mannes gefangen ist.\\n\\nWenn jemand in seinen letzten Tagen nicht weiß, wem er sein Geld hinterlassen soll, wäre ich dankbar für seine Hilfe. Geld hat im nächsten Leben keinen Wert – es bleibt hier.`,
+        button: 'Kontaktieren Sie mich',
+        donate: 'Spenden Sie mit Bitcoin:'
+      },
+      ar: {
+        main: `أحتاج إلى شخص يساعدني. أرى العالم كما لو كنت من قمة جبل، منفصلاً عن العادي. لا أشتهي وظيفة جيدة—ليس لأنني كسول، ولكن لأنني أشعر وكأنني خرجت من الماتريكس. امتلاك وظيفة منتظمة ممل وغير مناسب لي. أرى العيوب في الآخرين، والعالم يشعر وكأنه لعبة فيديو مليئة بالشخصيات.\\n\\nالشيء الوحيد الذي سيجعلني سعيداً حقاً هو أن أصبح مليونيراً، وسفر حول العالم، وعيش حياة جيدة. أنا فقير—لا أملك حتى ما يكفي من المال لشراء سيارة مستعملة—لكن لدي عقلية المليونير. أنا مليونير محاصر في جسد رجل فقير.\\n\\nإذا كان هناك شخص في أيامه الأخيرة لا يعرف من يترك ماله له، فسأكون شاكراً لمساعدتهم. المال ليس له قيمة في العالم التالي—يبقى هنا.`,
+        button: 'اتصل بي',
+        donate: 'تبرع بالبيتكوين:'
+      },
+      zh: {
+        main: `我需要有人帮助我。我看到世界仿佛从山顶看，脱离了平凡。我不渴望一份好工作——不是因为我懒，而是因为我觉得自己已经走出了矩阵。有一份普通的工作很无聊，不适合我。我看到他人的缺陷，世界感觉像一个充满角色的视频游戏。\\n\\n唯一真正能让我快乐的事情是成为百万富翁，环游世界，过上美好的生活。我很穷——我甚至没有足够的钱买一辆二手车——但我有百万富翁的心态。我是一个被困在穷人身体里的百万富翁。\\n\\n如果有人在生命的最后几天不知道把钱留给谁，我会感激他们的帮助。钱在下一个世界没有价值——它留在这里。`,
+        button: '联系我',
+        donate: '用比特币捐赠：'
+      },
+      ja: {
+        main: `誰かに助けてもらいたい。私は山の頂上から世界を見ているかのように、普通の生活から切り離された状態で世界を見ています。私は良い仕事が欲しいとは思っていません—怠惰だからではなく、マトリックスから抜け出したような気がするからです。普通の仕事は退屈で、私には合いません。他人の欠点が見え、世界はキャラクターでいっぱいのビデオゲームのように感じます。\\n\\n私を本当に幸せにする唯一のことは、百万長者になること、世界中を旅すること、そして良い生活を送ることです。私は貧乏です—中古車を買うお金さえありません—しかし、百万長者のマインドセットを持っています。私は貧しい男の体に閉じ込められた百万長者です。\\n\\n人生の最後の日々を過ごす人が、誰に自分の金を残せばいいかわからない場合、彼らの助けに感謝します。お金は次の世界では価値がありません—それはここに残ります。`,
+        button: '私に連絡する',
+        donate: 'ビットコインで寄付:'
+      }
+    };
+
+    const langSelect = document.getElementById('lang-select');
+    const mainPara = document.getElementById('main-para');
+    const contactBtn = document.getElementById('contact-btn');
+    const donateText = document.getElementById('donate-text');
+
+    function updateLanguage(lang) {
+      const trans = translations[lang];
+      mainPara.innerHTML = trans.main.replace(/\\n\\n/g, '<br><br>');
+      contactBtn.innerText = trans.button;
+      donateText.innerText = trans.donate;
+      document.documentElement.lang = lang;
+      if (lang === 'ar') {
+        document.body.dir = 'rtl';
+        document.body.style.textAlign = 'right';
+      } else {
+        document.body.dir = 'ltr';
+        document.body.style.textAlign = 'center';
+      }
+    }
+
+    langSelect.addEventListener('change', (e) => {
+      updateLanguage(e.target.value);
+    });
+
+    // Default to Spanish
+    updateLanguage('es');
+  </script>
 </body>
 </html>
 
