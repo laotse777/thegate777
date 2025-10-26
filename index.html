@@ -3,146 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO TITLE -->
   <title>777 — A Millionaire Mindset | Personal Journey</title>
-
-  <!-- SEO DESCRIPTION -->
   <meta name="description" content="The story of someone with a millionaire mindset living in a poor reality, seeking freedom, purpose, and transformation.">
   <meta name="robots" content="index, follow">
-
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- FUENTE AMIRI -->
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
-
-  <!-- SOCIAL SHARING (OPEN GRAPH) -->
+  
+  <!-- Fuentes mejoradas -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph -->
   <meta property="og:title" content="A Millionaire Mindset — 777">
   <meta property="og:description" content="A personal story of seeing life beyond the ordinary, seeking abundance and purpose.">
   <meta property="og:image" content="https://thegate777.org/image.png">
   <meta property="og:url" content="https://thegate777.org/">
   <meta property="og:type" content="website">
-
-  <!-- TWITTER CARD -->
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="A Millionaire Mindset — 777">
   <meta name="twitter:description" content="A personal journey seeking abundance and freedom.">
   <meta name="twitter:image" content="https://thegate777.org/image.png">
 
   <style>
+    :root {
+      --gold: #ffd700;
+      --dark-gold: #e6c200;
+      --dark-bg: #121212;
+      --darker-bg: #0a0a0a;
+      --text-light: #f5f5f5;
+      --card-bg: rgba(30, 30, 30, 0.85);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      background-image: url('image.png');
-      background-size: 800px auto;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-color: #121212;
-      color: #f5f5f5;
+      background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+      color: var(--text-light);
       font-family: 'Amiri', serif;
-      direction: ltr;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
     }
-
-    /* Selector de idioma */
+    
+    /* Efecto de partículas doradas en el fondo */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    
+    .particle {
+      position: absolute;
+      background-color: var(--gold);
+      border-radius: 50%;
+      opacity: 0;
+    }
+    
+    /* Overlay oscuro para mejor contraste */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.7);
+      z-index: -1;
+    }
+    
+    /* Selector de idioma mejorado */
     .lang-selector {
       position: fixed;
-      top: 10px;
-      right: 10px;
+      top: 20px;
+      right: 20px;
       z-index: 1000;
-      background-color: rgba(18, 18, 18, 0.8);
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ffd700;
     }
-    .lang-selector label {
-      color: #ffd700;
-      font-size: 0.9em;
-      margin-right: 5px;
-    }
+    
     .lang-selector select {
-      background-color: #ffd700;
-      color: #121212;
-      border: none;
-      padding: 5px;
-      border-radius: 3px;
+      background: rgba(30, 30, 30, 0.9);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 8px 15px;
+      border-radius: 25px;
       font-family: inherit;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
-
+    
+    .lang-selector select:hover {
+      background: rgba(255, 215, 0, 0.1);
+    }
+    
+    /* Contenedor principal */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    /* Título con efecto mejorado */
     h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      color: #ffd700;
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5em;
+      font-weight: 700;
+      color: var(--gold);
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      letter-spacing: 8px;
+      margin-bottom: 10px;
     }
-
+    
+    .subtitle {
+      font-size: 1.2em;
+      color: var(--text-light);
+      opacity: 0.8;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    
+    /* Tarjeta de contenido principal */
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 40px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    
     #main-para {
       font-size: 1.3em;
-      max-width: 700px;
-      margin-bottom: 40px;
-      line-height: 2;
-      background-color: rgba(53, 52, 52, 0.6);
-      padding: 20px;
-      border-radius: 10px;
+      line-height: 1.8;
+      text-align: justify;
     }
-
-    #contact-btn {
-      background-color: #ffd700;
-      color: #121212;
+    
+    /* Botón mejorado */
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%);
+      color: var(--dark-bg);
       border: none;
-      padding: 15px 30px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    #contact-btn:hover {
-      background-color: #e6c200;
-    }
-
-    .donate {
-      color: #ffd700;
-      margin-top: 20px;
-    }
-
-    .donate strong {
-      color: #ffffff;
+      padding: 15px 40px;
       font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+      font-family: 'Playfair Display', serif;
+      letter-spacing: 1px;
     }
-
-    #donate-text {
-      margin-bottom: 5px;
+    
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
     }
-
+    
+    /* Sección de donación mejorada */
+    .donation-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 25px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 215, 0, 0.2);
+    }
+    
+    .donation-title {
+      color: var(--gold);
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .crypto-address {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 1.1em;
+      word-break: break-all;
+      border: 1px dashed var(--gold);
+      margin: 15px 0;
+      color: var(--text-light);
+    }
+    
+    .copy-btn {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 8px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: inherit;
+      margin-top: 10px;
+    }
+    
+    .copy-btn:hover {
+      background: rgba(255, 215, 0, 0.1);
+    }
+    
+    /* Animaciones mejoradas */
     .fade-in-up {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(30px);
       animation: fadeInUp 1s ease-out forwards;
     }
-
+    
     @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
-    h1.fade-in-up { animation-delay: 0s; }
-    #main-para.fade-in-up { animation-delay: 0.3s; }
-    #contact-btn.fade-in-up { animation-delay: 0.6s; }
-    .donate.fade-in-up { animation-delay: 0.9s; }
+    
+    h1.fade-in-up { animation-delay: 0.1s; }
+    .subtitle.fade-in-up { animation-delay: 0.2s; }
+    .card.fade-in-up { animation-delay: 0.3s; }
+    .btn-gold.fade-in-up { animation-delay: 0.5s; }
+    .donation-section.fade-in-up { animation-delay: 0.7s; }
+    
+    /* Efecto de brillo intermitente en el título */
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+      50% { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6); }
+    }
+    
+    h1 {
+      animation: glow 3s ease-in-out infinite;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3em;
+        letter-spacing: 5px;
+      }
+      
+      .card, .donation-section {
+        padding: 25px;
+      }
+      
+      #main-para {
+        font-size: 1.1em;
+        text-align: left;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      
+      .card, .donation-section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Efecto de partículas -->
+  <div class="particles" id="particles"></div>
+  <div class="overlay"></div>
+  
   <!-- Selector de Idioma -->
   <div class="lang-selector">
-    <label for="lang-select">Idioma:</label>
     <select id="lang-select">
       <option value="es">Español</option>
       <option value="en">English</option>
@@ -154,69 +298,136 @@
     </select>
   </div>
 
-  <h1 class="fade-in-up">7 7 7</h1>
-
-  <p id="main-para" class="fade-in-up">
-    Necesito que alguien me ayude. Veo el mundo como si estuviera desde la cima de una montaña, desconectado de lo ordinario. No anhelo un buen trabajo, no porque sea perezoso, sino porque siento que he salido de la matrix. Tener un trabajo regular es aburrido y no es para mí. Veo los defectos en los demás, y el mundo se siente como un videojuego lleno de personajes.<br><br>Lo único que realmente me haría feliz es convertirme en millonario, viajar por el mundo y vivir una buena vida. Soy pobre, ni siquiera tengo suficiente dinero para comprar un auto usado, pero tengo la mentalidad de un millonario. Soy un millonario atrapado en el cuerpo de un hombre pobre.<br><br>Si alguien en sus últimos días no sabe a quién dejar su dinero, estaría agradecido por su ayuda. El dinero no tiene valor en el próximo mundo, se queda aquí.
-  </p>
-
-  <button id="contact-btn" class="fade-in-up" onclick="window.location.href='mailto:thisgate777@gmail.com'">Contáctame</button>
-
-  <p class="donate fade-in-up">
-    <span id="donate-text">Donar con Bitcoin:</span><br>
-    <strong>bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq</strong>
-  </p>
+  <div class="container">
+    <h1 class="fade-in-up">7 7 7</h1>
+    <p class="subtitle fade-in-up">Mentalidad de Millonario • Realidad Transformadora</p>
+    
+    <div class="card fade-in-up">
+      <p id="main-para">
+        Necesito que alguien me ayude. Veo el mundo como si estuviera desde la cima de una montaña, desconectado de lo ordinario. No anhelo un buen trabajo, no porque sea perezoso, sino porque siento que he salido de la matrix. Tener un trabajo regular es aburrido y no es para mí. Veo los defectos en los demás, y el mundo se siente como un videojuego lleno de personajes.<br><br>Lo único que realmente me haría feliz es convertirme en millonario, viajar por el mundo y vivir una buena vida. Soy pobre, ni siquiera tengo suficiente dinero para comprar un auto usado, pero tengo la mentalidad de un millonario. Soy un millonario atrapado en el cuerpo de un hombre pobre.<br><br>Si alguien en sus últimos días no sabe a quién dejar su dinero, estaría agradecido por su ayuda. El dinero no tiene valor en el próximo mundo, se queda aquí.
+      </p>
+    </div>
+    
+    <button id="contact-btn" class="btn-gold fade-in-up" onclick="window.location.href='mailto:thisgate777@gmail.com'">Contáctame</button>
+    
+    <div class="donation-section fade-in-up">
+      <div class="donation-title" id="donate-text">Donar con Bitcoin</div>
+      <div class="crypto-address">bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq</div>
+      <button class="copy-btn" onclick="copyBitcoinAddress()">Copiar Dirección</button>
+    </div>
+  </div>
 
   <script>
+    // Crear efecto de partículas
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Tamaño y posición aleatorios
+        const size = Math.random() * 5 + 1;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const delay = Math.random() * 20;
+        const duration = Math.random() * 10 + 10;
+        
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+        
+        particlesContainer.appendChild(particle);
+      }
+      
+      // Añadir animación flotante
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes float {
+          0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+          50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+          80% { opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+    
+    // Copiar dirección Bitcoin
+    function copyBitcoinAddress() {
+      const address = 'bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq';
+      navigator.clipboard.writeText(address).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const originalText = btn.textContent;
+        btn.textContent = '¡Copiada!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      });
+    }
+    
+    // Sistema de traducción
     const translations = {
       en: {
-        main: `I need someone to help me. I see the world as if from the top of a mountain, detached from the ordinary. I don’t crave a good job—not because I’m lazy, but because I feel like I’ve stepped out of the matrix. Having a regular job is boring and not for me. I see the flaws in others, and the world feels like a video game filled with characters.\\n\\nThe only thing that would truly make me happy is to become a millionaire, to travel the world, and to live a good life. I’m poor—I don’t even have enough money to buy a used car—but I have the mindset of a millionaire. I’m a millionaire trapped in the body of a poor man.\\n\\nIf someone in their final days doesn’t know who to leave their money to, I’d be grateful for their help. Money has no value in the next world—it stays here.`,
+        subtitle: "Millionaire Mindset • Transformative Reality",
+        main: `I need someone to help me. I see the world as if from the top of a mountain, detached from the ordinary. I don't crave a good job—not because I'm lazy, but because I feel like I've stepped out of the matrix. Having a regular job is boring and not for me. I see the flaws in others, and the world feels like a video game filled with characters.\\n\\nThe only thing that would truly make me happy is to become a millionaire, to travel the world, and to live a good life. I'm poor—I don't even have enough money to buy a used car—but I have the mindset of a millionaire. I'm a millionaire trapped in the body of a poor man.\\n\\nIf someone in their final days doesn't know who to leave their money to, I'd be grateful for their help. Money has no value in the next world—it stays here.`,
         button: 'Contact Me',
-        donate: 'Donate with Bitcoin:'
+        donate: 'Donate with Bitcoin'
       },
       es: {
+        subtitle: "Mentalidad de Millonario • Realidad Transformadora",
         main: `Necesito que alguien me ayude. Veo el mundo como si estuviera desde la cima de una montaña, desconectado de lo ordinario. No anhelo un buen trabajo, no porque sea perezoso, sino porque siento que he salido de la matrix. Tener un trabajo regular es aburrido y no es para mí. Veo los defectos en los demás, y el mundo se siente como un videojuego lleno de personajes.\\n\\nLo único que realmente me haría feliz es convertirme en millonario, viajar por el mundo y vivir una buena vida. Soy pobre, ni siquiera tengo suficiente dinero para comprar un auto usado, pero tengo la mentalidad de un millonario. Soy un millonario atrapado en el cuerpo de un hombre pobre.\\n\\nSi alguien en sus últimos días no sabe a quién dejar su dinero, estaría agradecido por su ayuda. El dinero no tiene valor en el próximo mundo, se queda aquí.`,
         button: 'Contáctame',
-        donate: 'Donar con Bitcoin:'
+        donate: 'Donar con Bitcoin'
       },
       fr: {
+        subtitle: "Mentalité de Millionnaire • Réalité Transformative",
         main: `J'ai besoin de quelqu'un pour m'aider. Je vois le monde comme si j'étais au sommet d'une montagne, détaché de l'ordinaire. Je ne désire pas un bon emploi — pas parce que je suis paresseux, mais parce que j'ai l'impression d'être sorti de la matrice. Avoir un emploi régulier est ennuyeux et ce n'est pas pour moi. Je vois les défauts chez les autres, et le monde ressemble à un jeu vidéo rempli de personnages.\\n\\nLa seule chose qui me rendrait vraiment heureux serait de devenir millionnaire, de voyager dans le monde et de vivre une bonne vie. Je suis pauvre — je n'ai même pas assez d'argent pour acheter une voiture d'occasion — mais j'ai l'état d'esprit d'un millionnaire. Je suis un millionnaire piégé dans le corps d'un pauvre.\\n\\nSi quelqu'un dans ses derniers jours ne sait pas à qui laisser son argent, je lui serais reconnaissant pour son aide. L'argent n'a pas de valeur dans l'autre monde — il reste ici.`,
         button: 'Contactez-moi',
-        donate: 'Faites un don avec Bitcoin :'
+        donate: 'Faites un don avec Bitcoin'
       },
       de: {
+        subtitle: "Millionärsmentalität • Transformative Realität",
         main: `Ich brauche jemanden, der mir hilft. Ich sehe die Welt, als würde ich vom Gipfel eines Berges aus darauf blicken, losgelöst vom Alltäglichen. Ich sehne mich nicht nach einem guten Job – nicht, weil ich faul bin, sondern weil ich das Gefühl habe, aus der Matrix ausgestiegen zu sein. Ein normaler Job ist langweilig und nichts für mich. Ich sehe die Fehler bei anderen, und die Welt fühlt sich wie ein Videospiel an, das voller Charaktere ist.\\n\\nDas Einzige, was mich wirklich glücklich machen würde, wäre, Millionär zu werden, die Welt zu bereisen und ein gutes Leben zu führen. Ich bin arm – ich habe nicht einmal genug Geld, um ein gebrauchtes Auto zu kaufen –, aber ich habe die Denkweise eines Millionärs. Ich bin ein Millionär, der im Körper eines armen Mannes gefangen ist.\\n\\nWenn jemand in seinen letzten Tagen nicht weiß, wem er sein Geld hinterlassen soll, wäre ich dankbar für seine Hilfe. Geld hat im nächsten Leben keinen Wert – es bleibt hier.`,
         button: 'Kontaktieren Sie mich',
-        donate: 'Spenden Sie mit Bitcoin:'
+        donate: 'Spenden Sie mit Bitcoin'
       },
       ar: {
+        subtitle: "عقلية المليونير • واقع تحويلي",
         main: `أحتاج إلى شخص يساعدني. أرى العالم كما لو كنت من قمة جبل، منفصلاً عن العادي. لا أشتهي وظيفة جيدة—ليس لأنني كسول، ولكن لأنني أشعر وكأنني خرجت من الماتريكس. امتلاك وظيفة منتظمة ممل وغير مناسب لي. أرى العيوب في الآخرين، والعالم يشعر وكأنه لعبة فيديو مليئة بالشخصيات.\\n\\nالشيء الوحيد الذي سيجعلني سعيداً حقاً هو أن أصبح مليونيراً، وسفر حول العالم، وعيش حياة جيدة. أنا فقير—لا أملك حتى ما يكفي من المال لشراء سيارة مستعملة—لكن لدي عقلية المليونير. أنا مليونير محاصر في جسد رجل فقير.\\n\\nإذا كان هناك شخص في أيامه الأخيرة لا يعرف من يترك ماله له، فسأكون شاكراً لمساعدتهم. المال ليس له قيمة في العالم التالي—يبقى هنا.`,
         button: 'اتصل بي',
-        donate: 'تبرع بالبيتكوين:'
+        donate: 'تبرع بالبيتكوين'
       },
       zh: {
+        subtitle: "百万富翁心态 • 变革现实",
         main: `我需要有人帮助我。我看到世界仿佛从山顶看，脱离了平凡。我不渴望一份好工作——不是因为我懒，而是因为我觉得自己已经走出了矩阵。有一份普通的工作很无聊，不适合我。我看到他人的缺陷，世界感觉像一个充满角色的视频游戏。\\n\\n唯一真正能让我快乐的事情是成为百万富翁，环游世界，过上美好的生活。我很穷——我甚至没有足够的钱买一辆二手车——但我有百万富翁的心态。我是一个被困在穷人身体里的百万富翁。\\n\\n如果有人在生命的最后几天不知道把钱留给谁，我会感激他们的帮助。钱在下一个世界没有价值——它留在这里。`,
         button: '联系我',
-        donate: '用比特币捐赠：'
+        donate: '用比特币捐赠'
       },
       ja: {
+        subtitle: "大富豪のマインドセット • 変革的な現実",
         main: `誰かに助けてもらいたい。私は山の頂上から世界を見ているかのように、普通の生活から切り離された状態で世界を見ています。私は良い仕事が欲しいとは思っていません—怠惰だからではなく、マトリックスから抜け出したような気がするからです。普通の仕事は退屈で、私には合いません。他人の欠点が見え、世界はキャラクターでいっぱいのビデオゲームのように感じます。\\n\\n私を本当に幸せにする唯一のことは、百万長者になること、世界中を旅すること、そして良い生活を送ることです。私は貧乏です—中古車を買うお金さえありません—しかし、百万長者のマインドセットを持っています。私は貧しい男の体に閉じ込められた百万長者です。\\n\\n人生の最後の日々を過ごす人が、誰に自分の金を残せばいいかわからない場合、彼らの助けに感謝します。お金は次の世界では価値がありません—それはここに残ります。`,
         button: '私に連絡する',
-        donate: 'ビットコインで寄付:'
+        donate: 'ビットコインで寄付'
       }
     };
 
     const langSelect = document.getElementById('lang-select');
     const mainPara = document.getElementById('main-para');
     const contactBtn = document.getElementById('contact-btn');
-    const donateText = document.getElementById('donate-text');
+    const donateText = document.querySelector('.donation-title');
+    const subtitle = document.querySelector('.subtitle');
 
     function updateLanguage(lang) {
       const trans = translations[lang];
       mainPara.innerHTML = trans.main.replace(/\\n\\n/g, '<br><br>');
       contactBtn.innerText = trans.button;
       donateText.innerText = trans.donate;
+      subtitle.innerText = trans.subtitle;
       document.documentElement.lang = lang;
+      
       if (lang === 'ar') {
         document.body.dir = 'rtl';
         document.body.style.textAlign = 'right';
@@ -230,12 +441,12 @@
       updateLanguage(e.target.value);
     });
 
-    // Default to Spanish
+    // Inicializar
+    createParticles();
     updateLanguage('es');
   </script>
 </body>
 </html>
-
 
 
 
