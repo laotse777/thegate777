@@ -41,7 +41,14 @@
     }
     
     body {
-      background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+      /* FONDO ORIGINAL MÁS MEJORADO */
+      background-image: url('image.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #121212;
+      
       color: var(--text-light);
       font-family: 'Amiri', serif;
       min-height: 100vh;
@@ -53,6 +60,17 @@
       padding: 20px;
       position: relative;
       overflow-x: hidden;
+    }
+    
+    /* Overlay oscuro para mejor contraste con el fondo */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 10, 10, 0.7);
+      z-index: -1;
     }
     
     /* Efecto de partículas doradas en el fondo */
@@ -71,17 +89,6 @@
       background-color: var(--gold);
       border-radius: 50%;
       opacity: 0;
-    }
-    
-    /* Overlay oscuro para mejor contraste */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(10, 10, 10, 0.7);
-      z-index: -1;
     }
     
     /* Selector de idioma mejorado */
@@ -266,6 +273,11 @@
         font-size: 1.1em;
         text-align: left;
       }
+      
+      body {
+        background-size: cover;
+        background-position: center;
+      }
     }
     
     @media (max-width: 480px) {
@@ -281,9 +293,9 @@
 </head>
 
 <body>
-  <!-- Efecto de partículas -->
-  <div class="particles" id="particles"></div>
+  <!-- Overlay y partículas -->
   <div class="overlay"></div>
+  <div class="particles" id="particles"></div>
   
   <!-- Selector de Idioma -->
   <div class="lang-selector">
@@ -321,14 +333,14 @@
     // Crear efecto de partículas
     function createParticles() {
       const particlesContainer = document.getElementById('particles');
-      const particleCount = 50;
+      const particleCount = 30;
       
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.classList.add('particle');
         
         // Tamaño y posición aleatorios
-        const size = Math.random() * 5 + 1;
+        const size = Math.random() * 4 + 1;
         const posX = Math.random() * 100;
         const posY = Math.random() * 100;
         const delay = Math.random() * 20;
