@@ -18,6 +18,8 @@
   <meta property="og:title" content="777 — Mentalidad Millonaria | Transformación Personal">
   <meta property="og:description" content="Descubre la mentalidad millonaria que transforma vidas. Historia personal de abundancia y libertad financiera.">
   <meta property="og:image" content="https://thegate777.org/image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://thegate777.org/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="777 Mentalidad Millonaria">
@@ -30,6 +32,15 @@
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://thegate777.org/">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
   
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -404,7 +415,7 @@
   <!-- Selector de Idioma -->
   <div class="lang-selector">
     <div class="language-icon">🌍</div>
-    <span class="language-text">Language</span>
+    <label for="lang-select" class="language-text">Language</label>
     <select id="lang-select">
       <option value="es">Español</option>
       <option value="en">English</option>
@@ -456,7 +467,12 @@
     // Crear efecto de partículas
     function createParticles() {
       const particlesContainer = document.getElementById('particles');
-      const particleCount = 30;
+      let particleCount = 30;
+      
+      // Reducir partículas en móviles para mejor performance
+      if (window.innerWidth < 768) {
+        particleCount = 15;
+      }
       
       for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
@@ -626,12 +642,19 @@
       subtitle.innerText = trans.subtitle;
       document.documentElement.lang = lang;
       
+      // Mejorar alineación RTL para árabe
       if (lang === 'ar') {
         document.body.dir = 'rtl';
         document.body.style.textAlign = 'right';
+        document.querySelectorAll('h2, h3, p').forEach(el => {
+          el.style.textAlign = 'right';
+        });
       } else {
         document.body.dir = 'ltr';
         document.body.style.textAlign = 'center';
+        document.querySelectorAll('h2, h3, p').forEach(el => {
+          el.style.textAlign = el.tagName === 'P' ? 'justify' : 'center';
+        });
       }
     }
 
@@ -645,6 +668,7 @@
   </script>
 </body>
 </html>
+
 
 
 
