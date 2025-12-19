@@ -313,7 +313,7 @@
 
     <div class="donation-section fade-in-up">
       <div class="donation-title" id="donate-text">Donar con Bitcoin</div>
-      <div class="crypto-address">bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq</div>
+      <div class="crypto-address">bc1q3s5lzsr9kgw5ycazqk49jyzdvpr3tcq42wxerq</div>
       <button class="copy-btn" onclick="copyBitcoinAddress()">Copiar Dirección</button>
     </div>
   </div>
@@ -350,7 +350,7 @@
 
     // Copiar Bitcoin
     function copyBitcoinAddress() {
-      const address = 'bc1q3s5lzsr3kgw5ycazqk49jyzdvpr3tcq42wxerq';
+      const address = 'bc1q3s5lzsr9kgw5ycazqk49jyzdvpr3tcq42wxerq';
       navigator.clipboard.writeText(address).then(() => {
         const btn = document.querySelector('.copy-btn');
         const original = btn.textContent;
@@ -408,6 +408,7 @@
   </script>
 </body>
 </html>
+
 
 
 
