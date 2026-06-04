@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Don't know who to leave your inheritance to? | 777</title>
-  <meta name="description" content="No heirs or don't know who to leave your fortune to? Discover a conscious option: your legacy can create freedom and purpose. Info and contact.">
-  <meta name="keywords" content="legado eterno, herencia sin herederos, a quién dejar fortuna, testamento, donación última voluntad, mentalidad millonaria, salir de la matrix, abundancia, bitcoin">
+  <title>¿A quién dejar tu herencia sin herederos? | 777</title>
+  <meta name="description" content="¿Sin herederos claros y no sabés a quién dejar tu patrimonio? Otra opción real: no banco, no ONG. Persona, no institución. Contacto y Bitcoin.">
+  <meta name="keywords" content="herencia sin herederos, a quién dejar herencia, patrimonio sin hijos, testamento sin descendientes, dejar fortuna sin familia, qué hacer con mi herencia, 777, bitcoin">
   <meta name="robots" content="index, follow">
   <meta name="author" content="777">
   <meta name="theme-color" content="#777777">
@@ -17,43 +17,32 @@
   <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <!-- Fuentes -->
+  <link rel="alternate" hreflang="es" href="https://thegate777.org/">
+  <link rel="alternate" hreflang="x-default" href="https://thegate777.org/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="image.png" as="image">
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="777 — i wanna be rich">
-  <meta property="og:description" content="A respectful invitation for those reflecting on their legacy. Turn your wealth into real freedom and purpose.">
+  <meta property="og:title" content="¿A quién dejar tu herencia sin herederos? | 777">
+  <meta property="og:description" content="Sin herederos claros: otra opción para tu patrimonio. No banco, no ONG. Persona real.">
+  <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://thegate777.org/image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://thegate777.org/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="777">
+  <meta property="og:image:alt" content="777 — herencia sin herederos, otra opción para tu patrimonio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="777">
-  <meta name="twitter:description" content="Who to leave your fortune to? An invitation for those reflecting on their legacy.">
+  <meta name="twitter:title" content="¿A quién dejar tu herencia sin herederos? | 777">
+  <meta name="twitter:description" content="Sin herederos claros: otra opción para tu patrimonio. No banco, no ONG.">
   <meta name="twitter:image" content="https://thegate777.org/image.png">
 
   <link rel="canonical" href="https://thegate777.org/">
 
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "777",
-    "description": "Legado eterno: invitación para quien reflexiona sobre su herencia y desea que su fortuna cree libertad y propósito real",
-    "url": "https://thegate777.org/",
-    "sameAs": ["mailto:thisgate777@gmail.com"],
-    "potentialAction": {
-      "@type": "DonateAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "bitcoin:bc1q2xn8vmcemjnar0ruejg8ahshh8qp4l2vhu3lsx",
-        "description": "Donación Bitcoin para apoyo personal"
-      }
-    }
-  }
-  </script>
+  <script type="application/ld+json" id="structured-data"></script>
 
   <style>
     :root {
@@ -62,44 +51,78 @@
       --accent: #111111;
       --light: #f7f7f7;
       --dark-bg: #0a0a0a;
-      --card-bg: rgba(25, 25, 25, 0.85);
+      --card-bg: rgba(0, 0, 0, 0.02);
+      --card-blur: 2px;
       --highlight: #a7a7a7;
+      --gold: #F5C842;
+      --gold-bright: #FFE566;
+      --cyan: #00F5D4;
+      --cyan-soft: #7FFFD4;
+      --cream: #FFF0D4;
+      --outline: #0a1520;
+      --text-stroke: 0.75px var(--outline);
+      --outline-shadow:
+        -1px -1px 0 var(--outline),
+         1px -1px 0 var(--outline),
+        -1px  1px 0 var(--outline),
+         1px  1px 0 var(--outline),
+         0   -1px 0 var(--outline),
+         0    1px 0 var(--outline),
+        -1px  0   0 var(--outline),
+         1px  0   0 var(--outline);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background-image: url('image.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
       background-color: var(--dark-bg);
-      color: var(--light);
+      color: var(--cream);
       font-family: 'Amiri', serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       text-align: center;
       padding: 20px;
       position: relative;
       overflow-x: hidden;
     }
 
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background: var(--dark-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .bg-image {
+      width: 112%;
+      height: 112%;
+      max-width: none;
+      max-height: none;
+      object-fit: contain;
+      object-position: center center;
+    }
+
     .overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(10, 10, 10, 0.4);
-      z-index: -1;
+      background: transparent;
+      z-index: -2;
+      pointer-events: none;
     }
 
     .particles {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
       z-index: -1;
-      opacity: 0.4;
+      opacity: 0.12;
     }
 
     .particle {
@@ -133,46 +156,69 @@
       cursor: pointer;
     }
 
-    .container { max-width: 800px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+    .container { max-width: 800px; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 40px 0 60px; }
 
-     {
-      font-family: 'Playfair Display', serif;
-      font-size: 4.5em;
-      font-weight: 700;
-      color: #f7f7f7;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-      letter-spacing: 6px;
-      animation: glow 3s ease-in-out infinite;
+    header {
+      background: transparent;
+      padding: 24px 28px;
+      width: 100%;
     }
 
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 10px rgba(119, 119, 119, 0.5); }
-      50% { text-shadow: 0 0 20px rgba(119, 119, 119, 0.8), 0 0 30px rgba(119, 119, 119, 0.6); }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: var(--cyan-soft);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.7);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      max-width: 900px;
+      animation: titleGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes titleGlow {
+      0%, 100% {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.7);
+      }
+      50% {
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 1), 0 0 28px rgba(0, 0, 0, 0.85);
+      }
     }
 
     .subtitle {
       font-size: 1.2em;
-      color: var(--light);
-      opacity: 0.9;
-      margin-bottom: 30px;
+      color: var(--gold-bright);
+      opacity: 1;
+      margin-bottom: 10px;
       font-style: italic;
+      -webkit-text-stroke: 0.5px var(--outline);
+      paint-order: stroke fill;
+      text-shadow: var(--outline-shadow), 0 0 16px rgba(245, 200, 66, 0.45);
     }
 
-    .card, .donation-section {
+    .card, .donation-section, .faq-section {
       background: var(--card-bg);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(var(--card-blur));
+      -webkit-backdrop-filter: blur(var(--card-blur));
       border-radius: 15px;
       padding: 40px;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      border: 1px solid rgba(119, 119, 119, 0.3);
+      box-shadow: none;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .card p, #main-para p, #vision-para p, #call-para p, .faq-item p {
+      color: var(--cream);
+      -webkit-text-stroke: 0.35px var(--outline);
+      paint-order: stroke fill;
+      text-shadow: var(--outline-shadow), 0 0 10px rgba(0, 0, 0, 0.6);
     }
 
     h2, h3 {
       font-family: 'Playfair Display', serif;
-      color: #00AAAA;
+      color: var(--cyan);
       text-align: center;
-      text-shadow: 0 0 8px rgba(0, 170, 170, 0.3);
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
 
     h2 { font-size: 1.8em; margin: 30px 0 20px; }
@@ -195,57 +241,73 @@
 
     #quote-para {
       font-style: italic;
-      opacity: 0.85;
+      opacity: 1;
       margin-top: 35px;
       font-size: 1.15em;
       text-align: center;
+      color: var(--gold-bright);
+      -webkit-text-stroke: 0.5px var(--outline);
+      paint-order: stroke fill;
+      text-shadow: var(--outline-shadow), 0 0 20px rgba(245, 200, 66, 0.5);
     }
 
-    .highlight { color: #00ffcc; font-weight: bold; text-shadow: 0 0 10px rgba(0, 255, 204, 0.5); }
+    .highlight {
+      color: var(--cyan);
+      font-weight: bold;
+      -webkit-text-stroke: 0.4px var(--outline);
+      text-shadow: var(--outline-shadow), 0 0 12px rgba(0, 245, 212, 0.65);
+    }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-      color: var(--light);
-      border: none;
-      padding: 15px 40px;
-      font-size: 1.1em;
+      background: #ffffff;
+      color: var(--outline);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      padding: 18px 52px;
+      font-size: 1.3em;
       font-weight: bold;
       cursor: pointer;
       border-radius: 50px;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(119, 119, 119, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 255, 255, 0.25);
       font-family: 'Playfair Display', serif;
       letter-spacing: 1px;
+      text-shadow: none;
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(119, 119, 119, 0.5);
+      background: #f5f5f5;
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.55), 0 0 24px rgba(255, 255, 255, 0.4);
+      color: #000;
     }
 
     .donation-title {
-      color: var(--primary);
+      color: var(--gold-bright);
       font-size: 1.3em;
       margin-bottom: 15px;
       font-family: 'Playfair Display', serif;
+      -webkit-text-stroke: 0.5px var(--outline);
+      paint-order: stroke fill;
+      text-shadow: var(--outline-shadow), 0 0 14px rgba(245, 200, 66, 0.45);
     }
 
     .crypto-address {
-      background: rgba(19, 19, 19, 0.5);
+      background: rgba(0, 0, 0, 0.08);
       padding: 15px;
       border-radius: 10px;
       font-family: monospace;
       font-size: 1.1em;
       word-break: break-all;
-      border: 1px dashed var(--primary);
+      border: 1px dashed var(--cyan);
       margin: 15px 0;
-      color: var(--light);
+      color: var(--cyan-soft);
+      text-shadow: var(--outline-shadow), 0 0 10px rgba(0, 245, 212, 0.35);
     }
 
     .copy-btn {
       background: transparent;
-      color: var(--primary);
-      border: 1px solid var(--primary);
+      color: var(--cyan);
+      border: 1px solid var(--cyan);
       padding: 8px 20px;
       border-radius: 25px;
       cursor: pointer;
@@ -255,9 +317,9 @@
     }
 
     .copy-btn:hover {
-      background: rgba(119, 119, 119, 0.1);
-      color: var(--highlight);
-      border-color: var(--highlight);
+      background: rgba(0, 245, 212, 0.12);
+      color: var(--gold-bright);
+      border-color: var(--gold-bright);
     }
 
     .fade-in-up {
@@ -275,26 +337,92 @@
     .card.fade-in-up { animation-delay: 0.3s; }
     .btn-primary.fade-in-up { animation-delay: 0.5s; }
     .donation-section.fade-in-up { animation-delay: 0.7s; }
+    .faq-section.fade-in-up { animation-delay: 0.85s; }
+    .site-footer.fade-in-up { animation-delay: 0.95s; }
+
+    .faq-section {
+      text-align: left;
+    }
+
+    .faq-section h2 {
+      margin-top: 0;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .faq-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(119, 119, 119, 0.25);
+      padding-bottom: 18px;
+    }
+
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .faq-item h3 {
+      font-size: 1.15em;
+      margin: 0 0 10px;
+      text-align: left;
+      color: var(--gold-bright);
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .faq-item p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      opacity: 0.92;
+      text-align: left;
+    }
+
+    .site-footer {
+      margin-top: 10px;
+      font-size: 0.9em;
+      opacity: 0.85;
+      max-width: 800px;
+      color: var(--cream);
+      text-shadow: var(--outline-shadow);
+    }
+
+    .site-footer a { color: var(--cyan-soft); text-decoration: none; text-shadow: var(--outline-shadow), 0 0 8px rgba(0, 245, 212, 0.4); }
+    .site-footer a:hover { text-decoration: underline; }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     @media (max-width: 768px) {
-      h1 { font-size: 3em; letter-spacing: 5px; }
-      .card, .donation-section { padding: 25px; }
+      h1 { font-size: 1.85em; letter-spacing: 0.5px; }
+      header { padding: 18px 16px; }
+      .card, .donation-section, .faq-section { padding: 25px; }
       #main-para, #main-para p, #vision-para p, #call-para p { font-size: 1.1em; text-align: left; }
     }
 
     @media (max-width: 480px) {
-      h1 { font-size: 2.5em; }
-      .card, .donation-section { padding: 20px; }
+      h1 { font-size: 1.5em; }
+      .card, .donation-section, .faq-section { padding: 20px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="overlay"></div>
-  <div class="particles" id="particles"></div>
+  <div class="bg-layer" aria-hidden="true">
+    <img src="image.png" alt="" class="bg-image" width="1070" height="1279" fetchpriority="high">
+  </div>
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
 
-  <div class="lang-selector">
-    <div class="language-icon">🌍</div>
+  <nav class="lang-selector" aria-label="Idioma">
+    <div class="language-icon" aria-hidden="true">🌍</div>
+    <label for="lang-select" class="sr-only">Seleccionar idioma</label>
     <select id="lang-select">
       <option value="es">Español</option>
       <option value="en">English</option>
@@ -304,33 +432,48 @@
       <option value="zh">中文</option>
       <option value="ja">日本語</option>
     </select>
-  </div>
+  </nav>
 
-  <div class="container">
-    <h1 class="fade-in-up">777</h1>
-    <p class="subtitle fade-in-up">¿A quién dejar tu fortuna cuando ya no estés aquí?</p>
+  <main class="container" id="main-content">
+    <header>
+      <h1 id="page-title" class="fade-in-up">¿A quién dejar tu herencia sin herederos?</h1>
+      <p class="subtitle fade-in-up">777 · Otra opción para tu patrimonio</p>
+    </header>
 
-    <div class="card fade-in-up">
-      <h2 id="main-title">Una invitación desde el respeto</h2>
+    <article class="card fade-in-up" aria-labelledby="main-title">
+      <h2 id="main-title">Qué hacer con tu patrimonio</h2>
       <div id="main-para"></div>
 
-      <h3 id="vision-title">Lo que tu legado podría multiplicar a través mío</h3>
+      <h3 id="vision-title">Las chances</h3>
       <div id="vision-para"></div>
 
-      <h3 id="call-title">¿Por qué esto podría resonar contigo?</h3>
+      <h3 id="call-title">Fuera de lo común</h3>
       <div id="call-para"></div>
 
       <p id="quote-para"></p>
-    </div>
+    </article>
 
-    <button id="contact-btn" class="btn-primary fade-in-up" onclick="window.location.href='mailto:thisgate777@gmail.com?subject=Legado%20Eterno%20-%20Contacto'">Contáctame</button>
+    <button id="contact-btn" class="btn-primary fade-in-up">Contáctame</button>
 
-    <div class="donation-section fade-in-up">
+    <section class="donation-section fade-in-up" aria-labelledby="donate-text">
       <div class="donation-title" id="donate-text">Donar o transferir con Bitcoin</div>
-      <div class="crypto-address">bc1q2xn8vmcemjnar0ruejg8ahshh8qp4l2vhu3lsx</div>
-      <button id="copy-btn" class="copy-btn" onclick="copyBitcoinAddress()">Copiar dirección</button>
-    </div>
-  </div>
+      <div class="crypto-address" aria-label="Dirección Bitcoin">bc1q5hh9949ymcp3k0zshzwsh79c6xsd9wl4cqxq3z</div>
+      <button id="copy-btn" class="copy-btn" type="button" onclick="copyBitcoinAddress()">Copiar dirección</button>
+    </section>
+
+    <section class="faq-section fade-in-up" aria-labelledby="faq-title">
+      <h2 id="faq-title">Preguntas frecuentes</h2>
+      <ul class="faq-list" id="faq-list"></ul>
+    </section>
+
+    <footer class="site-footer fade-in-up">
+      <p>© 777 · <a href="https://thegate777.org/">thegate777.org</a> · <a href="mailto:thisgate777@gmail.com">thisgate777@gmail.com</a></p>
+    </footer>
+  </main>
+
+  <noscript>
+    <p>¿A quién dejar tu herencia sin herederos? 777 ofrece otra opción para tu patrimonio cuando no tienes herederos claros — no banco, no ONG. Contacto: thisgate777@gmail.com</p>
+  </noscript>
 
   <script>
     // Partículas
@@ -363,7 +506,7 @@
     }
 
     // Copiar Bitcoin
-    const BTC_ADDRESS = 'bc1q2xn8vmcemjnar0ruejg8ahshh8qp4l2vhu3lsx';
+    const BTC_ADDRESS = 'bc1q5hh9949ymcp3k0zshzwsh79c6xsd9wl4cqxq3z';
     function copyBitcoinAddress() {
       const lang = document.getElementById('lang-select').value;
       navigator.clipboard.writeText(BTC_ADDRESS).then(() => {
@@ -374,109 +517,245 @@
       });
     }
 
-    // Traducciones (nuevo texto "Legado Eterno")
     const translations = {
       es: {
-        subtitle: "¿A quién dejar tu fortuna cuando ya no estés aquí?",
-        mainTitle: "Una invitación desde el respeto",
-        main: "<p>Si estás en tus últimos días, o llevas tiempo preguntándote <span class=\"highlight\">a quién dejar todo lo que construiste</span> porque no hay herederos claros o cercanos, esta página existe para vos.</p><p>No soy familia, no soy una institución. Soy alguien que despertó de la matrix financiera y social. Veo el mundo desde fuera: sus reglas repetitivas, sus ilusiones, sus trampas. No busco un empleo común porque ya no pertenezco a ese ciclo.</p>",
-        visionTitle: "Lo que tu legado podría multiplicar a través mío",
-        vision: "<p>Tengo la mentalidad y disciplina de quien está destinado a crear abundancia real: viajar sin ataduras, invertir en proyectos con propósito, vivir libertad financiera auténtica y ayudar a otros a despertar.<br><br>Tu riqueza, que de otra forma podría perderse en trámites, conflictos o instituciones impersonales, podría convertirse en <span class=\"highlight\">semilla de libertad para varias generaciones</span>.</p>",
-        callTitle: "¿Por qué esto podría resonar contigo?",
-        call: "<p>El dinero no cruza al otro lado.<br>Pero el impacto sí.<br><br>Si sentís que tu fortuna merece terminar en manos de alguien que la usará con consciencia, visión elevada y gratitud —en vez de diluirse—, escribime.<br><br>No pido caridad. Ofrezco ser el <span class=\"highlight\">continuador consciente</span> de tu energía material en esta dimensión.</p>",
-        quote: "\"Lo que das con intención elevada, regresa multiplicado… aunque ya no estés para verlo.\"",
+        pageTitle: "¿A quién dejar tu herencia sin herederos?",
+        metaTitle: "¿A quién dejar tu herencia sin herederos? | 777",
+        metaDescription: "¿Sin herederos claros y no sabés a quién dejar tu patrimonio? Otra opción real: no banco, no ONG. Persona, no institución. Contacto y Bitcoin.",
+        mailSubject: "Herencia sin herederos - Contacto",
+        subtitle: "777 · Otra opción para tu patrimonio",
+        mainTitle: "Qué hacer con tu patrimonio",
+        main: "<p>Si estás leyendo esto, quizás te estés preguntando qué hacer con tu patrimonio. Y si además no tienes herederos claros, quiero que sepas que existe otra opción. No la habitual, no la que te venden en los folletos de los bancos. Una distinta.</p><p>No soy una fundación, ni una ONG, ni una empresa con fines de lucro escondida detrás de un eslogan bonito. Soy una persona que un día decidió salir del guion. Dejé el camino predecible —casa, auto, carrera, jubilación— y elegí algo más simple y más difícil a la vez: libertad real, independencia y experiencias que valgan la pena vivirse.</p><p>Para mí, el dinero no es un fin. Es una herramienta. Sirve para crear, para tomar riesgos, para aprovechar el tiempo que se nos dio sin pedir permiso.</p>",
+        visionTitle: "Las chances",
+        vision: "<p>Si alguna vez pensaste que tu legado podría ir a parar a alguien que realmente lo use para vivir de forma distinta —en lugar de terminar engordando cuentas bancarias o perdido en trámites eternos—, entonces podés escribirme.</p><p>Sí, lo sé. Es casi imposible que alguien haga esto. Pero si llegaste hasta acá, la posibilidad existe, aunque sea mínima. Un 0.0001% de chances. Y con esas chances yo juego. Las juego todas.</p><p>Esta web la hice por si algún día alguien decide darme millones de dólares. Sí, suena absurdo. Pero más absurdo me parece vivir sin intentarlo.</p>",
+        callTitle: "Fuera de lo común",
+        call: "<p>Yo salí de la matrix. No soy un NPC que repite lo que hace el vecino. Me aburre ver cómo la mayoría duerme mientras le venden una vida prestada. Si te sentís igual, y querés que tu dinero realmente sirva para algo fuera de lo común… escribime.</p>",
+        quote: "No perdés nada. Y yo, al menos, lo intento.",
         button: "Contáctame",
         donate: "Donar o transferir con Bitcoin",
         copyBtn: "Copiar dirección",
-        copied: "¡Copiada!"
+        copied: "¡Copiada!",
+        faqTitle: "Preguntas frecuentes",
+        faqs: [
+          { q: "¿Puedo dejar mi herencia a alguien que no es de mi familia?", a: "En muchos casos sí, si no hay herederos forzosos (hijos, cónyuge o ascendientes con derecho a legítima). Puedes reflejarlo en un testamento. Esta web no sustituye asesoramiento legal: es un canal para contactar con una persona real si buscas una alternativa fuera de bancos e instituciones." },
+          { q: "¿Qué pasa si no tengo herederos y no dejo testamento?", a: "Se aplica la sucesión intestada: la ley llama parientes por orden de parentesco. Si no hay nadie, el patrimonio puede pasar al Estado. Por eso conviene planificar antes a quién quieres dejar tu fortuna." },
+          { q: "¿Qué es 777 y por qué existe esta página?", a: "777 es una persona, no una fundación ni ONG. La página está pensada para quien no tiene herederos claros y quiere explorar una opción distinta para su patrimonio o legado." }
+        ]
       },
       en: {
-        subtitle: "Who to leave your fortune to when you're no longer here?",
-        mainTitle: "An invitation with respect",
-        main: "<p>If you're in your final days, or you've been wondering <span class=\"highlight\">who to leave everything you've built to</span> because there are no clear or close heirs, this page is for you.</p><p>I'm not family, I'm not an institution. I'm someone who woke up from the financial and social matrix. I see the world from the outside: its repetitive rules, its illusions, its traps. I'm not looking for a common job because I no longer belong to that cycle.</p>",
-        visionTitle: "What your legacy could multiply through me",
-        vision: "<p>I have the mindset and discipline of someone destined to create real abundance: to travel without ties, invest in projects with purpose, live authentic financial freedom and help others wake up.<br><br>Your wealth, which might otherwise be lost in paperwork, conflict or impersonal institutions, could become a <span class=\"highlight\">seed of freedom for generations to come</span>.</p>",
-        callTitle: "Why might this resonate with you?",
-        call: "<p>Money doesn't cross to the other side.<br>But impact does.<br><br>If you feel your fortune deserves to end up in the hands of someone who will use it with awareness, higher vision and gratitude — rather than see it diluted — write to me.<br><br>I'm not asking for charity. I offer to be the <span class=\"highlight\">conscious continuator</span> of your material energy in this dimension.</p>",
-        quote: "\"What you give with high intention returns multiplied… even if you're no longer here to see it.\"",
+        pageTitle: "Who to leave your inheritance to without heirs?",
+        metaTitle: "Inheritance without heirs — who to leave it to? | 777",
+        metaDescription: "No clear heirs and unsure who should get your estate? A real alternative — not a bank or NGO. Contact or Bitcoin.",
+        mailSubject: "Inheritance without heirs - Contact",
+        subtitle: "777 · Another option for your estate",
+        mainTitle: "What to do with your estate",
+        main: "<p>If you're reading this, you may be wondering what to do with your estate. And if you don't have clear heirs, I want you to know there's another option. Not the usual one, not the one they sell you in bank brochures. A different one.</p><p>I'm not a foundation, an NGO, or a for-profit company hidden behind a nice slogan. I'm someone who one day decided to step off the script. I left the predictable path—house, car, career, retirement—and chose something simpler and harder at once: real freedom, independence, and experiences worth living.</p><p>For me, money isn't an end. It's a tool. It serves to create, to take risks, to use the time we were given without asking permission.</p>",
+        visionTitle: "The odds",
+        vision: "<p>If you ever thought your legacy could go to someone who would really use it to live differently—instead of fattening bank accounts or getting lost in endless paperwork—then you can write to me.</p><p>Yes, I know. It's almost impossible that someone would do this. But if you've made it this far, the possibility exists, however small. A 0.0001% chance. And I play those odds. I play them all.</p><p>I made this site in case someday someone decides to give me millions of dollars. Yes, it sounds absurd. But living without trying seems more absurd to me.</p>",
+        callTitle: "Out of the ordinary",
+        call: "<p>I left the matrix. I'm not an NPC repeating what the neighbor does. It bores me to see how most people sleep while they're sold a borrowed life. If you feel the same, and you want your money to really serve something out of the ordinary… write to me.</p>",
+        quote: "You lose nothing. And I, at least, am trying.",
         button: "Contact me",
         donate: "Donate or transfer with Bitcoin",
         copyBtn: "Copy address",
-        copied: "Copied!"
+        copied: "Copied!",
+        faqTitle: "Frequently asked questions",
+        faqs: [
+          { q: "Can I leave my inheritance to someone outside my family?", a: "In many cases yes, when there are no forced heirs (children, spouse or ascendants with legitim share). This can be stated in a will. This site is not legal advice: it is a way to contact a real person if you want an alternative outside banks and institutions." },
+          { q: "What happens if I have no heirs and no will?", a: "Intestate succession applies: the law calls relatives in order. If none exist, assets may pass to the State. Planning ahead matters." },
+          { q: "What is 777 and why does this page exist?", a: "777 is an individual, not a foundation or NGO. The page is for those without clear heirs who want a different option for their estate or legacy." }
+        ]
       },
       fr: {
-        subtitle: "À qui laisser votre fortune quand vous ne serez plus là ?",
-        mainTitle: "Une invitation dans le respect",
-        main: "<p>Si vous êtes dans vos derniers jours, ou que vous vous demandez depuis longtemps <span class=\"highlight\">à qui laisser tout ce que vous avez construit</span> faute d'héritiers clairs ou proches, cette page est pour vous.</p><p>Je ne suis pas famille, je ne suis pas une institution. Je suis quelqu'un qui s'est réveillé de la matrice financière et sociale. Je vois le monde de l'extérieur : ses règles répétitives, ses illusions, ses pièges. Je ne cherche pas un emploi ordinaire car je n'appartiens plus à ce cycle.</p>",
-        visionTitle: "Ce que votre legs pourrait multiplier à travers moi",
-        vision: "<p>J'ai l'état d'esprit et la discipline de quelqu'un destiné à créer une vraie abondance : voyager sans attaches, investir dans des projets à but, vivre une liberté financière authentique et aider d'autres à s'éveiller.<br><br>Votre richesse, qui pourrait autrement se perdre en démarches, conflits ou institutions impersonnelles, pourrait devenir une <span class=\"highlight\">graine de liberté pour les générations à venir</span>.</p>",
-        callTitle: "Pourquoi cela pourrait-il résonner en vous ?",
-        call: "<p>L'argent ne traverse pas de l'autre côté.<br>Mais l'impact, oui.<br><br>Si vous sentez que votre fortune mérite d'échoir à quelqu'un qui l'utilisera avec conscience, vision élevée et gratitude — au lieu de se diluer —, écrivez-moi.<br><br>Je ne demande pas la charité. J'offre d'être le <span class=\"highlight\">continuateur conscient</span> de votre énergie matérielle dans cette dimension.</p>",
-        quote: "\"Ce que vous donnez avec une intention élevée revient multiplié… même si vous n'êtes plus là pour le voir.\"",
+        pageTitle: "À qui laisser votre héritage sans héritiers ?",
+        metaTitle: "Héritage sans héritiers : à qui le laisser ? | 777",
+        metaDescription: "Pas d'héritiers clairs et vous ne savez pas à qui laisser votre patrimoine ? Une autre option — pas une banque ni une ONG.",
+        mailSubject: "Héritage sans héritiers - Contact",
+        subtitle: "777 · Une autre option pour votre patrimoine",
+        mainTitle: "Que faire de votre patrimoine",
+        main: "<p>Si vous lisez ceci, vous vous demandez peut-être quoi faire de votre patrimoine. Et si vous n'avez pas d'héritiers clairs, sachez qu'il existe une autre option. Pas celle d'habitude, pas celle qu'on vous vend dans les brochures des banques. Une autre.</p><p>Je ne suis pas une fondation, ni une ONG, ni une entreprise à but lucratif cachée derrière un beau slogan. Je suis quelqu'un qui un jour a décidé de sortir du scénario. J'ai quitté le chemin prévisible —maison, voiture, carrière, retraite— et j'ai choisi quelque chose de plus simple et plus difficile à la fois : la vraie liberté, l'indépendance et des expériences qui valent la peine d'être vécues.</p><p>Pour moi, l'argent n'est pas une fin. C'est un outil. Il sert à créer, à prendre des risques, à profiter du temps qu'on nous a donné sans demander la permission.</p>",
+        visionTitle: "Les chances",
+        vision: "<p>Si vous avez un jour pensé que votre legs pourrait aller à quelqu'un qui l'utiliserait vraiment pour vivre autrement —au lieu de gonfler des comptes bancaires ou de se perdre dans des démarches sans fin—, alors vous pouvez m'écrire.</p><p>Oui, je sais. C'est presque impossible que quelqu'un fasse cela. Mais si vous êtes arrivé jusqu'ici, la possibilité existe, même minime. 0,0001 % de chances. Et je joue ces chances. Je les joue toutes.</p><p>J'ai fait ce site au cas où un jour quelqu'un déciderait de me donner des millions de dollars. Oui, ça semble absurde. Mais vivre sans essayer me semble plus absurde encore.</p>",
+        callTitle: "Hors du commun",
+        call: "<p>Je suis sorti de la matrix. Je ne suis pas un PNJ qui répète ce que fait le voisin. Ça m'ennuie de voir comment la majorité dort pendant qu'on lui vend une vie empruntée. Si vous vous sentez pareil, et que vous voulez que votre argent serve vraiment à quelque chose d'extraordinaire… écrivez-moi.</p>",
+        quote: "Vous ne perdez rien. Et moi, au moins, j'essaie.",
         button: "Contactez-moi",
         donate: "Faire un don ou transférer en Bitcoin",
         copyBtn: "Copier l'adresse",
-        copied: "Copié !"
+        copied: "Copié !",
+        faqTitle: "Questions fréquentes",
+        faqs: [
+          { q: "Puis-je laisser mon héritage à quelqu'un hors de ma famille ?", a: "Souvent oui, s'il n'y a pas d'héritiers réservataires. Cela se formalise par testament. Ce site n'est pas un conseil juridique : c'est un contact avec une personne réelle, en dehors des banques et institutions." },
+          { q: "Que se passe-t-il sans héritiers ni testament ?", a: "La succession légale s'applique, puis éventuellement l'État. Mieux vaut planifier à l'avance." },
+          { q: "Qu'est-ce que 777 ?", a: "Une personne, pas une fondation ni une ONG. Pour ceux sans héritiers clairs qui cherchent une autre option pour leur patrimoine." }
+        ]
       },
       de: {
-        subtitle: "Wem Ihr Vermögen hinterlassen, wenn Sie nicht mehr da sind?",
-        mainTitle: "Eine Einladung mit Respekt",
-        main: "<p>Wenn Sie in Ihren letzten Tagen sind oder sich schon lange fragen, <span class=\"highlight\">wem Sie alles, was Sie aufgebaut haben, hinterlassen sollen</span>, weil es keine klaren oder nahen Erben gibt, ist diese Seite für Sie.</p><p>Ich bin keine Familie, ich bin keine Institution. Ich bin jemand, der aus der finanziellen und sozialen Matrix erwacht ist. Ich sehe die Welt von außen: ihre repetitiven Regeln, ihre Illusionen, ihre Fallen. Ich suche keinen gewöhnlichen Job, weil ich zu diesem Zyklus nicht mehr gehöre.</p>",
-        visionTitle: "Was Ihr Vermächtnis durch mich vervielfachen könnte",
-        vision: "<p>Ich habe die Einstellung und Disziplin von jemandem, der dazu bestimmt ist, echten Überfluss zu schaffen: ohne Fesseln reisen, in Projekte mit Sinn investieren, authentische finanzielle Freiheit leben und anderen beim Erwachen helfen.<br><br>Ihr Reichtum, der sonst in Bürokratie, Konflikten oder anonymen Institutionen verloren gehen könnte, könnte zu einem <span class=\"highlight\">Samen der Freiheit für künftige Generationen</span> werden.</p>",
-        callTitle: "Warum könnte das bei Ihnen ankommen?",
-        call: "<p>Geld geht nicht auf die andere Seite.<br>Aber die Wirkung schon.<br><br>Wenn Sie spüren, dass Ihr Vermögen in die Hände von jemandem gehören sollte, der es mit Bewusstsein, höherer Vision und Dankbarkeit nutzt — statt es zu verwässern —, schreiben Sie mir.<br><br>Ich bitte nicht um Almosen. Ich biete an, der <span class=\"highlight\">bewusste Fortführer</span> Ihrer materiellen Energie in dieser Dimension zu sein.</p>",
-        quote: "\"Was Sie mit hoher Absicht geben, kehrt vervielfacht zurück… auch wenn Sie nicht mehr da sind, um es zu sehen.\"",
+        pageTitle: "Wem Ihr Erbe hinterlassen, wenn es keine Erben gibt?",
+        metaTitle: "Erbe ohne Erben: wem hinterlassen? | 777",
+        metaDescription: "Keine klaren Erben und unsicher, wem Sie Ihr Vermögen hinterlassen? Eine echte Alternative — keine Bank, keine NGO.",
+        mailSubject: "Erbe ohne Erben - Kontakt",
+        subtitle: "777 · Eine andere Option für Ihr Vermögen",
+        mainTitle: "Was mit Ihrem Vermögen tun",
+        main: "<p>Wenn Sie das lesen, fragen Sie sich vielleicht, was Sie mit Ihrem Vermögen anfangen sollen. Und wenn Sie keine klaren Erben haben, möchte ich, dass Sie wissen: Es gibt eine andere Option. Nicht die übliche, nicht die aus den Bankbroschüren. Eine andere.</p><p>Ich bin keine Stiftung, keine NGO und kein Gewinnunternehmen hinter einem schönen Slogan. Ich bin jemand, der eines Tages beschlossen hat, aus dem Drehbuch auszusteigen. Ich verließ den vorhersehbaren Weg —Haus, Auto, Karriere, Rente— und wählte etwas Einfacheres und zugleich Schwereres: echte Freiheit, Unabhängigkeit und Erfahrungen, die es wert sind, gelebt zu werden.</p><p>Für mich ist Geld kein Ziel. Es ist ein Werkzeug. Es dient zum Schaffen, zum Risiko, um die Zeit zu nutzen, die uns gegeben wurde, ohne um Erlaubnis zu fragen.</p>",
+        visionTitle: "Die Chancen",
+        vision: "<p>Wenn Sie je dachten, Ihr Vermächtnis könnte jemandem zugutekommen, der es wirklich nutzt, anders zu leben —statt Bankkonten zu füllen oder in endlosen Formalitäten zu versinken—, dann können Sie mir schreiben.</p><p>Ja, ich weiß. Es ist fast unmöglich, dass jemand das tut. Aber wenn Sie bis hierher gekommen sind, existiert die Möglichkeit, so klein sie auch sei. 0,0001 % Chance. Und diese Chancen spiele ich. Ich spiele sie alle.</p><p>Diese Seite habe ich gemacht für den Fall, dass eines Tages jemand beschließt, mir Millionen zu geben. Ja, es klingt absurd. Aber ohne es zu versuchen zu leben, erscheint mir noch absurder.</p>",
+        callTitle: "Außerhalb des Gewöhnlichen",
+        call: "<p>Ich bin aus der Matrix ausgestiegen. Ich bin kein NPC, der wiederholt, was der Nachbar tut. Es langweilt mich, wie die Mehrheit schläft, während man ihr ein geliehenes Leben verkauft. Wenn Sie sich gleich fühlen und wollen, dass Ihr Geld wirklich etwas Außergewöhnlichem dient… schreiben Sie mir.</p>",
+        quote: "Sie verlieren nichts. Und ich versuche es wenigstens.",
         button: "Kontaktiere mich",
         donate: "Mit Bitcoin spenden oder überweisen",
         copyBtn: "Adresse kopieren",
-        copied: "Kopiert!"
+        copied: "Kopiert!",
+        faqTitle: "Häufige Fragen",
+        faqs: [
+          { q: "Kann ich mein Erbe an jemanden außerhalb der Familie hinterlassen?", a: "In vielen Fällen ja, wenn es keine Pflichtteilsberechtigten gibt — per Testament. Diese Seite ist keine Rechtsberatung, sondern Kontakt zu einer realen Person außerhalb von Banken und Institutionen." },
+          { q: "Was passiert ohne Erben und ohne Testament?", a: "Gesetzliche Erbfolge, ggf. der Staat. Vorher planen lohnt sich." },
+          { q: "Was ist 777?", a: "Eine Person, keine Stiftung und keine NGO — für alle ohne klare Erben, die eine andere Option suchen." }
+        ]
       },
       ar: {
-        subtitle: "لمن تترك ثروتك عندما لا تكون هنا؟",
-        mainTitle: "دعوة باحترام",
-        main: "<p>إذا كنت في أيامك الأخيرة، أو كنت تتساءل منذ وقت <span class=\"highlight\">لمن تترك كل ما بنيته</span> لأنه لا يوجد ورثة واضحون أو قريبون، هذه الصفحة لك.</p><p>أنا لست عائلة، لست مؤسسة. أنا شخص استيقظ من الماتريكس المالية والاجتماعية. أرى العالم من الخارج: قواعده المتكررة، أوهامه، فخاخه. لا أبحث عن وظيفة عادية لأنني لم أعد أنتمي لتلك الدورة.</p>",
-        visionTitle: "ما يمكن أن يضاعفه إرثك من خلالي",
-        vision: "<p>لدي عقلية وانضباط من قدّر له خلق الوفرة الحقيقية: السفر بلا قيود، الاستثمار في مشاريع ذات هدف، عيش الحرية المالية الحقيقية ومساعدة آخرين على الاستيقاظ.<br><br>ثروتك، التي قد تضيع في إجراءات أو نزاعات أو مؤسسات مجهولة، يمكن أن تصبح <span class=\"highlight\">بذرة حرية لأجيال قادمة</span>.</p>",
-        callTitle: "لماذا قد يلقى هذا صدى لديك؟",
-        call: "<p>المال لا يعبر إلى الجانب الآخر.<br>لكن الأثر يعبر.<br><br>إن شعرت أن ثروتك تستحق أن تنتهي إلى يد من سيستخدمها بوعي ورؤية سامية وامتنان — بدل أن تُخفّف —، اكتب لي.<br><br>لا أطلب صدقة. أقدم نفسي <span class=\"highlight\">المواصِل الواعي</span> لطاقتك المادية في هذا البعد.</p>",
-        quote: "\"ما تعطيه بنية سامية يعود مضاعفاً… حتى لو لم تعد هنا لتراه.\"",
+        pageTitle: "لمن تترك ميراثك دون ورثة؟",
+        metaTitle: "ميراث بلا ورثة: لمن تتركه؟ | 777",
+        metaDescription: "لا ورثة واضحون ولا تعرف لمن تترك ممتلكاتك؟ خيار آخر — ليس بنكاً ولا منظمة.",
+        mailSubject: "ميراث بلا ورثة - اتصال",
+        subtitle: "777 · خيار آخر لممتلكاتك",
+        mainTitle: "ماذا تفعل بممتلكاتك",
+        main: "<p>إذا كنت تقرأ هذا، ربما تتساءل ماذا تفعل بممتلكاتك. وإذا لم يكن لديك ورثة واضحون، أريدك أن تعرف أن هناك خياراً آخر. ليس المعتاد، ليس ما يبيعونه في كتيبات البنوك. خيار مختلف.</p><p>لست مؤسسة ولا منظمة غير ربحية ولا شركة ربحية مختبئة خلف شعار جميل. أنا شخص قرر يوماً الخروج من النص. تركت المسار المتوقع —بيت، سيارة، مهنة، تقاعد— واخترت شيئاً أبسط وأصعب في آن واحد: حرية حقيقية، استقلال وتجارب تستحق العيش.</p><p>بالنسبة لي، المال ليس غاية. إنه أداة. يخدم للإبداع، لتحمل المخاطر، لاستغلال الوقت الذي أُعطي لنا دون طلب إذن.</p>",
+        visionTitle: "الفرص",
+        vision: "<p>إن فكرت يوماً أن إرثك قد يذهب لمن يستخدمه حقاً للعيش بشكل مختلف —بدل أن ينتفخ في حسابات بنكية أو يضيع في إجراءات لا تنتهي—، فاكتب لي.</p><p>نعم، أعرف. من شبه المستحيل أن يفعل أحد هذا. لكن إن وصلت حتى هنا، فالإمكانية موجودة، ولو ضئيلة. 0.0001% فرصة. وأنا ألعب هذه الفرص. ألعبها كلها.</p><p>صنعت هذا الموقع لو قرر أحد يوماً أن يعطيني ملايين الدولارات. نعم، يبدو سخيفاً. لكن العيش دون المحاولة يبدو لي أكثر سخافة.</p>",
+        callTitle: "خارج المألوف",
+        call: "<p>خرجت من الماتريكس. لست شخصية ثانوية تكرر ما يفعل الجار. يملّني أن أرى كيف ينام معظم الناس بينما تُباع لهم حياة مستعارة. إن شعرت مثلي، وأردت أن يخدم مالك شيئاً خارج المألوف… اكتب لي.</p>",
+        quote: "لا تخسر شيئاً. وأنا على الأقل أحاول.",
         button: "اتصل بي",
         donate: "التبرع أو التحويل بالبيتكوين",
         copyBtn: "نسخ العنوان",
-        copied: "تم النسخ!"
+        copied: "تم النسخ!",
+        faqTitle: "أسئلة شائعة",
+        faqs: [
+          { q: "هل يمكنني ترك الميراث لشخص خارج العائلة؟", a: "في كثير من الحالات نعم، عندما لا يوجد ورثة إلزاميون، عبر الوصية. هذا الموقع ليس استشارة قانونية بل وسيلة للتواصل مع شخص حقيقي خارج البنوك والمؤسسات." },
+          { q: "ماذا يحدث بدون ورثة وبدون وصية؟", a: "تُطبَّق قواعد الميراث القانوني، وقد يذهب المال للدولة. التخطيط مسبقاً مهم." },
+          { q: "ما هو 777؟", a: "شخص وليس مؤسسة أو منظمة — لمن ليس لديهم ورثة واضحون ويبحثون عن خيار مختلف." }
+        ]
       },
       zh: {
-        subtitle: "当您不在了，把财富留给谁？",
-        mainTitle: "一份带着尊重的邀请",
-        main: "<p>若您已至人生最后阶段，或长久以来一直在想<span class=\"highlight\">该把毕生所建托付给谁</span>，因为没有明确或亲近的继承人，本页为您而写。</p><p>我不是家人，也不是机构。我是从金融与社会矩阵中醒来的人。我从外部看世界：其重复的规则、幻象与陷阱。我不寻求普通工作，因为我不再属于那个循环。</p>",
-        visionTitle: "您的遗产通过我能成倍放大什么",
-        vision: "<p>我具备注定创造真实丰盛者的心态与纪律：无牵无挂地旅行、投资有意义的项目、活出真正的财务自由并帮助他人觉醒。<br><br>您的财富，若不然可能耗散在手续、纠纷或冷漠的机构中，却可以成为<span class=\"highlight\">几代人自由的种子</span>。</p>",
-        callTitle: "为何这可能与您共鸣？",
-        call: "<p>金钱过不到彼岸。<br>但影响可以。<br><br>若您觉得您的财富值得交到会用意识、更高视野与感恩去运用的人手中——而不是被稀释——请给我写信。<br><br>我不是在乞讨。我提出成为您物质能量在此维度中的<span class=\"highlight\">意识延续者</span>。</p>",
-        quote: "\"以高尚意图所给予的，会加倍回归……即使您已不在这里看见。\"",
+        pageTitle: "没有继承人，遗产留给谁？",
+        metaTitle: "无继承人遗产留给谁？| 777",
+        metaDescription: "没有明确继承人，不知财产留给谁？另一种选择——不是银行，不是非政府组织。",
+        mailSubject: "无继承人遗产 - 联系",
+        subtitle: "777 · 您财产的另一种选择",
+        mainTitle: "如何处理您的财产",
+        main: "<p>若您正在读这些文字，或许在想该如何处置您的财产。若没有明确的继承人，我想让您知道还有另一种选择。不是惯常的那种，不是银行宣传册里推销的那种。一种不同的选择。</p><p>我不是基金会，不是非政府组织，也不是躲在漂亮口号背后的营利公司。我是一个决定走出剧本的人。我离开了可预见的道路——房子、车子、职业、退休——选择了更简单也更难的事：真正的自由、独立和值得去活的体验。</p><p>对我来说，金钱不是目的，是工具。用来创造、承担风险、在不请示任何人的情况下用好我们被给予的时间。</p>",
+        visionTitle: "那一点几率",
+        vision: "<p>若您曾想过，您的遗产可以交给真正会用它来不同方式生活的人——而不是肥了银行账户或消失在无休止的手续里——那么可以给我写信。</p><p>是的，我知道。几乎不可能有人这么做。但若您读到了这里，可能性就存在，哪怕极小。0.0001% 的几率。而我赌这些几率。我赌全部。</p><p>我做这个网站，以防有一天有人决定给我数百万美元。是的，听起来荒谬。但不尝试就活，在我看来更荒谬。</p>",
+        callTitle: "不寻常之路",
+        call: "<p>我走出了矩阵。我不是重复邻居生活的 NPC。看大多数人睡着、却被兜售借来的人生，让我厌烦。若您有同感，且希望您的钱真正用于不寻常之事……请写信给我。</p>",
+        quote: "您不会失去什么。而我，至少在尝试。",
         button: "联系我",
         donate: "用比特币捐赠或转账",
         copyBtn: "复制地址",
-        copied: "已复制！"
+        copied: "已复制！",
+        faqTitle: "常见问题",
+        faqs: [
+          { q: "可以把遗产留给非家人吗？", a: "在许多情况下可以，若无强制继承人，可通过遗嘱规定。本页非法律咨询，而是联系一个真实的人，作为银行与机构之外的另一种选择。" },
+          { q: "没有继承人且没有遗嘱会怎样？", a: "适用法定继承顺序，极端情况下财产可能归国家。提前规划很重要。" },
+          { q: "777 是什么？", a: "一个人，不是基金会或非政府组织——面向没有明确继承人、想探索不同财产安排的人。" }
+        ]
       },
       ja: {
-        subtitle: "もういない時、財産を誰に残しますか？",
-        mainTitle: "敬意を込めた招待",
-        main: "<p>最期の日々を迎えている方、あるいは明確な相続人がおらず、<span class=\"highlight\">築いたすべてを誰に残すか</span>ずっと考えてこられた方へ、このページはあります。</p><p>私は家族でも機関でもありません。金融・社会のマトリックスから目覚めた者です。外から世界を見ています：繰り返されるルール、幻想、罠。普通の仕事を求めていません。もうそのサイクルには属していないからです。</p>",
-        visionTitle: "あなたのレガシーが私を通じて広がるもの",
-        vision: "<p>本当の豊かさを創る使命を持つ者のマインドセットと規律があります：縁に縛られず旅し、意味あるプロジェクトに投資し、本物の経済的自由を生き、他者の目覚めを助けます。<br><br>手続き、争い、冷たい機関に消えるかもしれないあなたの富を、<span class=\"highlight\">何世代にもわたる自由の種</span>に変えることができます。</p>",
-        callTitle: "なぜこれが心に響くかもしれませんか",
-        call: "<p>お金はあの世には持っていけません。<br>でも影響は残ります。<br><br>あなたの財産が、意識と高いビジョンと感謝をもって使う誰かの手に渡る価値があると感じるなら—薄められるより—私にご連絡ください。<br><br>施しを求めているのではありません。この次元であなたの物質的なエネルギーを<span class=\"highlight\">意識的に継ぐ者</span>となることを提案しています。</p>",
-        quote: "「高い意図で与えたものは、倍になって返ってくる……あなたがもう見ていなくても。」",
+        pageTitle: "相続人がいないとき、遺産を誰に残す？",
+        metaTitle: "相続人なし：遺産を誰に？ | 777",
+        metaDescription: "明確な相続人がおらず、財産を誰に残すか迷っている？銀行でもNGOでもない、もう一つの選択。",
+        mailSubject: "相続人なし遺産 - お問い合わせ",
+        subtitle: "777 · 財産のもう一つの選択",
+        mainTitle: "財産をどうするか",
+        main: "<p>これを読んでいるなら、財産をどうするか考えているのかもしれません。明確な相続人がいないなら、別の選択肢があることを知ってほしい。いつものやつでも、銀行のパンフレットで売られるやつでもない。違うもの。</p><p>私は財団でもNGOでも、きれいなスローガンの裏に隠れた営利企業でもありません。ある日シナリオから外れると決めた一人です。予測可能な道—家、車、キャリア、退職—を離れ、もっとシンプルで同時にもっと難しいものを選びました：本当の自由、独立、生きる価値のある体験。</p><p>私にとってお金は目的ではなく道具です。創るため、リスクを取るため、許可を求めずに与えられた時間を使うため。</p>",
+        visionTitle: "その確率",
+        vision: "<p>遺産が、銀行口座を太らせたり終わりのない手続きに消えたりするのではなく、本当に違う生き方に使う人のところへ行けると思ったことがあるなら、書いてください。</p><p>はい、わかっています。誰かがこんなことをするのはほぼ不可能です。でもここまで来たなら、可能性はある。どんなに小さくても。0.0001%のチャンス。私はそのチャンスに賭けます。全部賭けます。</p><p>いつか誰かが何百万ドルもくれると決めた時のために、このサイトを作りました。はい、ばかげて聞こえます。でも挑戦せずに生きる方が、私にはもっとばかげています。</p>",
+        callTitle: "いつもと違う道",
+        call: "<p>私はマトリックスから出ました。隣人の真似をするNPCではありません。多くの人が眠りながら借り物の人生を売られているのを見るのは退屈です。同じ気持ちで、お金を本当にいつもと違うことに使いたいなら…書いてください。</p>",
+        quote: "あなたは何も失いません。そして私は、少なくとも挑戦しています。",
         button: "お問い合わせ",
         donate: "ビットコインで寄付・送金",
         copyBtn: "アドレスをコピー",
-        copied: "コピーしました！"
+        copied: "コピーしました！",
+        faqTitle: "よくある質問",
+        faqs: [
+          { q: "家族以外に遺産を残せますか？", a: "法定相続人がいない場合など、遺言で可能なことが多いです。本サイトは法律相談ではなく、銀行や機関以外の、実在の人物への連絡窓口です。" },
+          { q: "相続人も遺言もない場合は？", a: "法定相続が適用され、最終的には国に帰属する場合もあります。事前の計画が重要です。" },
+          { q: "777とは？", a: "財団でもNGOでもない一人の人物。明確な相続人がおらず、別の選択を探す方のためのページです。" }
+        ]
       }
     };
 
+    const SITE_URL = 'https://thegate777.org/';
+
+    function renderFaqs(faqs) {
+      const list = document.getElementById('faq-list');
+      if (!list || !faqs) return;
+      list.innerHTML = faqs.map((item, i) => `
+        <li class="faq-item">
+          <h3 id="faq-q-${i}">${item.q}</h3>
+          <p>${item.a}</p>
+        </li>
+      `).join('');
+    }
+
+    function updateStructuredData(t) {
+      const el = document.getElementById('structured-data');
+      if (!el || !t.faqs) return;
+      const data = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            '@id': SITE_URL + '#website',
+            'url': SITE_URL,
+            'name': '777',
+            'description': t.metaDescription,
+            'inLanguage': document.documentElement.lang
+          },
+          {
+            '@type': 'WebPage',
+            '@id': SITE_URL + '#webpage',
+            'url': SITE_URL,
+            'name': t.metaTitle,
+            'description': t.metaDescription,
+            'isPartOf': { '@id': SITE_URL + '#website' },
+            'about': { '@type': 'Thing', 'name': t.pageTitle }
+          },
+          {
+            '@type': 'FAQPage',
+            '@id': SITE_URL + '#faq',
+            'mainEntity': t.faqs.map(item => ({
+              '@type': 'Question',
+              'name': item.q,
+              'acceptedAnswer': { '@type': 'Answer', 'text': item.a }
+            }))
+          },
+          {
+            '@type': 'Person',
+            '@id': SITE_URL + '#person',
+            'name': '777',
+            'description': t.metaDescription,
+            'url': SITE_URL,
+            'email': 'mailto:thisgate777@gmail.com',
+            'potentialAction': {
+              '@type': 'DonateAction',
+              'target': {
+                '@type': 'EntryPoint',
+                'urlTemplate': 'bitcoin:bc1q5hh9949ymcp3k0zshzwsh79c6xsd9wl4cqxq3z',
+                'description': 'Donación Bitcoin'
+              }
+            }
+          }
+        ]
+      };
+      el.textContent = JSON.stringify(data);
+    }
+
     const elements = {
+      pageTitle: document.getElementById('page-title'),
       subtitle: document.querySelector('.subtitle'),
       mainTitle: document.getElementById('main-title'),
       mainPara: document.getElementById('main-para'),
@@ -487,7 +766,8 @@
       quotePara: document.getElementById('quote-para'),
       contactBtn: document.getElementById('contact-btn'),
       donateText: document.querySelector('.donation-title'),
-      copyBtn: document.getElementById('copy-btn')
+      copyBtn: document.getElementById('copy-btn'),
+      faqTitle: document.getElementById('faq-title')
     };
 
     function updateLanguage(lang) {
@@ -495,6 +775,19 @@
       document.documentElement.lang = lang;
       document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
+      if (t.metaTitle) document.title = t.metaTitle;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && t.metaDescription) metaDesc.setAttribute('content', t.metaDescription);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle && t.metaTitle) ogTitle.setAttribute('content', t.metaTitle);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc && t.metaDescription) ogDesc.setAttribute('content', t.metaDescription);
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle && t.metaTitle) twTitle.setAttribute('content', t.metaTitle);
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc && t.metaDescription) twDesc.setAttribute('content', t.metaDescription);
+
+      if (elements.pageTitle) elements.pageTitle.innerText = t.pageTitle;
       if (elements.subtitle) elements.subtitle.innerText = t.subtitle;
       if (elements.mainTitle) elements.mainTitle.innerText = t.mainTitle;
       if (elements.mainPara) elements.mainPara.innerHTML = t.main;
@@ -506,24 +799,27 @@
       if (elements.contactBtn) elements.contactBtn.innerText = t.button;
       if (elements.donateText) elements.donateText.innerText = t.donate;
       if (elements.copyBtn) elements.copyBtn.textContent = t.copyBtn;
+      if (elements.faqTitle && t.faqTitle) elements.faqTitle.innerText = t.faqTitle;
+      if (t.faqs) renderFaqs(t.faqs);
+      updateStructuredData(t);
     }
 
     document.getElementById('lang-select').addEventListener('change', (e) => {
       updateLanguage(e.target.value);
     });
 
-    // Inicializar
+    document.getElementById('contact-btn').addEventListener('click', () => {
+      const lang = document.getElementById('lang-select').value;
+      const t = translations[lang] || translations['es'];
+      const subject = encodeURIComponent(t.mailSubject);
+      window.location.href = `mailto:thisgate777@gmail.com?subject=${subject}`;
+    });
+
     createParticles();
     updateLanguage('es');
   </script>
 </body>
 </html>
-
-
-
-
-
-
 
 
 
